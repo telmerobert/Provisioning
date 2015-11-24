@@ -1,0 +1,33 @@
+Chef Server:
+Chef is a configuration management tool written in Ruby and Erlang. Using Chef server you can manage a large number of servers. In Simple words you can define it as a central server which distributes the configuration details to every node those are registered with it. It helps to automate the application deployment and relevant environment setup. You can integrate with cloud-based platforms such as Rackspace, Amazon EC2, Linode and DigitalOcean to automatically provision and configure new machines.
+You have to write “recipes” which describes how Chef manages server applications like Apache, MySQL, Nginx etc.. and how they are to be configured in the machine. These recipes describe a series of resources that should be in a particular state: packages that should be installed, services that should be running, or files that should be written. Chef makes sure each resource is properly configured and corrects any resources that are not in the desired state.
+Installing Chef Server:
+Go to http://www.opscode.com/chef/install. If you have CentOS then select “Enterprise Linux” as your Operating system. If you have Ubuntu then select “Ubuntu“.  Then select Operating system version. Please note that Chef server only supports “x86_64″ bit operating systems. Select which version of Chef server you want to install. The name of the package will be displayed after the version is selected. Right-click the name of the package and copy the link location.
+For Ubuntu users the file is:
+1	wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef-server_11.0.10-1.ubuntu.12.04_amd64.deb
+For CentOS users the file is:
+1	wget https://opscode-omnibus-packages.s3.amazonaws.com/el/6/x86_64/chef-server-11.0.10-1.el6.x86_64.rpm
+When download finished, install it by issuing below command:
+Ubuntu Users:
+1	sudo dpkg -i chef-server_11.0.10-1.ubuntu.12.04_amd64.deb
+CentOS Users:
+1	rpm -Uvh chef-server-11.0.10-1.el6.x86_64.rpm
+Configure your machine hostname by following below steps.You can configure system hostname in two ways.
+Simple and temporary step for both CentOS and Ubuntu. (Option – 1)
+1	hostname chef.linuxfunda.com
+If you don’t have any DNS pointed to the machine then you can use the system IP to configure the hostmane.
+Verify your configured hostname.
+1	hostname
+Output:
+1
+2
+3	[root@chef ~]$ hostname
+chef.linuxfunda.com
+[root@chef ~]$
+Permanent solution: (Option – 2)
+CentOS users please edit /etc/sysconfig/network, enter:
+1	vi /etc/sysconfig/network
+Set HOSTNAME=chef.linuxfunda.com, enter:
+1	HOSTNAME=chef.linuxfunda.com
+
+
