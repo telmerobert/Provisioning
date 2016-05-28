@@ -1,0 +1,259 @@
+[root@10-168-25-13 ~]# yum install git
+Loaded plugins: product-id, rhnplugin, subscription-manager
+This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.
+This system is receiving updates from RHN Classic or RHN Satellite.
+Setting up Install Process
+Resolving Dependencies
+There are unfinished transactions remaining. You might consider running yum-complete-transaction first to finish them.
+The program yum-complete-transaction is found in the yum-utils package.
+--> Running transaction check
+---> Package git.x86_64 0:1.7.1-3.el6_4.1 will be installed
+--> Processing Dependency: perl-Git = 1.7.1-3.el6_4.1 for package: git-1.7.1-3.el6_4.1.x86_64
+--> Processing Dependency: rsync for package: git-1.7.1-3.el6_4.1.x86_64
+--> Processing Dependency: perl(Git) for package: git-1.7.1-3.el6_4.1.x86_64
+--> Processing Dependency: perl(Error) for package: git-1.7.1-3.el6_4.1.x86_64
+--> Running transaction check
+---> Package perl-Error.noarch 1:0.17015-4.el6 will be installed
+---> Package perl-Git.noarch 0:1.7.1-3.el6_4.1 will be installed
+---> Package rsync.x86_64 0:3.0.6-12.el6 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+========================================================================================================================================================================
+ Package                              Arch                             Version                                     Repository                                      Size
+========================================================================================================================================================================
+Installing:
+ git                                  x86_64                           1.7.1-3.el6_4.1                             rhel-x86_64-server-6                           4.6 M
+Installing for dependencies:
+ perl-Error                           noarch                           1:0.17015-4.el6                             rhel-x86_64-server-6                            29 k
+ perl-Git                             noarch                           1.7.1-3.el6_4.1                             rhel-x86_64-server-6                            28 k
+ rsync                                x86_64                           3.0.6-12.el6                                rhel-x86_64-server-6                           335 k
+
+Transaction Summary
+========================================================================================================================================================================
+Install       4 Package(s)
+
+Total download size: 5.0 M
+Installed size: 0
+Is this ok [y/N]: y
+Downloading Packages:
+(1/4): git-1.7.1-3.el6_4.1.x86_64.rpm                                                                                                            | 4.6 MB     00:02
+(2/4): perl-Error-0.17015-4.el6.noarch.rpm                                                                                                       |  29 kB     00:00
+(3/4): perl-Git-1.7.1-3.el6_4.1.noarch.rpm                                                                                                       |  28 kB     00:00
+(4/4): rsync-3.0.6-12.el6.x86_64.rpm                                                                                                             | 335 kB     00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                   1.3 MB/s | 5.0 MB     00:03
+Running rpm_check_debug
+Running Transaction Test
+Transaction Test Succeeded
+Running Transaction
+  Installing : 1:perl-Error-0.17015-4.el6.noarch                                                                                                                    1/4
+  Installing : rsync-3.0.6-12.el6.x86_64                                                                                                                            2/4
+  Installing : perl-Git-1.7.1-3.el6_4.1.noarch                                                                                                                      3/4
+  Installing : git-1.7.1-3.el6_4.1.x86_64                                                                                                                           4/4
+  Verifying  : git-1.7.1-3.el6_4.1.x86_64                                                                                                                           1/4
+  Verifying  : perl-Git-1.7.1-3.el6_4.1.noarch                                                                                                                      2/4
+  Verifying  : 1:perl-Error-0.17015-4.el6.noarch                                                                                                                    3/4
+  Verifying  : rsync-3.0.6-12.el6.x86_64                                                                                                                            4/4
+
+Installed:
+  git.x86_64 0:1.7.1-3.el6_4.1
+
+Dependency Installed:
+  perl-Error.noarch 1:0.17015-4.el6                        perl-Git.noarch 0:1.7.1-3.el6_4.1                        rsync.x86_64 0:3.0.6-12.el6
+
+Complete!
+[root@10-168-25-13 ~]#
+[root@10-168-25-13 ~]#
+[root@10-168-25-13 ~]#
+[root@10-168-25-13 ~]#
+[root@10-168-25-13 ~]# whereis git
+git: /usr/bin/git /usr/share/man/man1/git.1.gz
+[root@10-168-25-13 ~]# git --version
+git version 1.7.1
+[root@10-168-25-13 ~]# git --help
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help COMMAND' for more information on a specific command.
+[root@10-168-25-13 ~]# cd /home/
+[root@10-168-25-13 home]# ll
+total 0
+[root@10-168-25-13 home]# mkdir gopal
+[root@10-168-25-13 home]# cd gopal/
+[root@10-168-25-13 gopal]# mkdir projects
+[root@10-168-25-13 gopal]# cd projects/
+[root@10-168-25-13 projects]# mkdir chef
+[root@10-168-25-13 projects]# cd chef/
+[root@10-168-25-13 chef]# pwd
+/home/gopal/projects/chef
+[root@10-168-25-13 chef]# git init
+Initialized empty Git repository in /home/gopal/projects/chef/.git/
+[root@10-168-25-13 chef]# ls -altr
+total 12
+drwxr-xr-x 3 root root 4096 Aug  4 20:51 ..
+drwxr-xr-x 3 root root 4096 Aug  4 20:52 .
+drwxr-xr-x 7 root root 4096 Aug  4 20:52 .git
+[root@10-168-25-13 chef]# vi testfile
+[root@10-168-25-13 chef]# git add .
+[root@10-168-25-13 chef]# git commit -m 'new repo'
+[master (root-commit) 72cd54d] new repo
+ Committer: root <root@10-168-25-13.cloud.opsource.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+If the identity used for this commit is wrong, you can fix it with:
+
+    git commit --amend --author='Your Name <you@example.com>'
+
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+ create mode 100644 testfile
+[root@10-168-25-13 chef]# git config --global user.name "gopal"
+[root@10-168-25-13 chef]# git config --global user.email "visualpath.devops@gmail.com"
+[root@10-168-25-13 chef]# ll
+total 4
+-rw-r--r-- 1 root root 38 Aug  4 20:52 testfile
+[root@10-168-25-13 chef]# vi test2
+[root@10-168-25-13 chef]# ll
+total 8
+-rw-r--r-- 1 root root 19 Aug  4 20:55 test2
+-rw-r--r-- 1 root root 38 Aug  4 20:52 testfile
+[root@10-168-25-13 chef]# git add .
+[root@10-168-25-13 chef]# git commit -m 'new changes'
+[master d172ee1] new changes
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+ create mode 100644 test2
+[root@10-168-25-13 chef]# pwd
+/home/gopal/projects/chef
+[root@10-168-25-13 chef]# git config --bool core.bare true
+[root@10-168-25-13 chef]# ll
+total 12
+-rw-r--r-- 1 root root   19 Aug  4 20:55 test2
+drwxr-xr-x 2 root root 4096 Aug  4 21:09 test3
+-rw-r--r-- 1 root root   38 Aug  4 20:52 testfile
+[root@10-168-25-13 chef]# adduser testuser
+[root@10-168-25-13 chef]# passwd testuser
+Changing password for user testuser.
+New password:
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@10-168-25-13 chef]# cd /etc/sudo
+sudo.conf       sudoers         sudoers.d/      sudo-ldap.conf
+[root@10-168-25-13 chef]# cd /etc/sudo
+sudo.conf       sudoers         sudoers.d/      sudo-ldap.conf
+[root@10-168-25-13 chef]# cd /etc/sudoers
+-bash: cd: /etc/sudoers: Not a directory
+[root@10-168-25-13 chef]# vi /etc/sudoers
+[root@10-168-25-13 chef]# git config --bool core.bare false
+[root@10-168-25-13 chef]# ll
+total 12
+-rw-r--r-- 1 root root   19 Aug  4 20:55 test2
+drwxr-xr-x 2 root root 4096 Aug  4 21:09 test3
+-rw-r--r-- 1 root root   38 Aug  4 20:52 testfile
+[root@10-168-25-13 chef]# git config --bool core.bare true
+[root@10-168-25-13 chef]# sudo adduser git
+[root@10-168-25-13 chef]# su git
+[git@10-168-25-13 chef]$ cd /home/git/
+[git@10-168-25-13 ~]$ ll
+total 0
+[git@10-168-25-13 ~]$ mkdir .ssh && chmod 700 .ssh
+[git@10-168-25-13 ~]$ touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
+[git@10-168-25-13 ~]$ vi .ssh/authorized_keys
+[git@10-168-25-13 ~]$ cd /home/gopal/projects/chef/
+[git@10-168-25-13 chef]$ ll
+total 12
+-rw-r--r-- 1 root root   19 Aug  4 20:55 test2
+drwxr-xr-x 2 root root 4096 Aug  4 21:09 test3
+-rw-r--r-- 1 root root   38 Aug  4 20:52 testfile
+[git@10-168-25-13 chef]$ cd .git/
+[git@10-168-25-13 .git]$ ll
+total 44
+drwxr-xr-x  2 root root 4096 Aug  4 20:52 branches
+-rw-r--r--  1 root root   12 Aug  4 20:56 COMMIT_EDITMSG
+-rw-r--r--  1 root root   91 Aug  4 21:20 config
+-rw-r--r--  1 root root   73 Aug  4 20:52 description
+-rw-r--r--  1 root root   23 Aug  4 20:52 HEAD
+drwxr-xr-x  2 root root 4096 Aug  4 20:52 hooks
+-rw-r--r--  1 root root  176 Aug  4 20:56 index
+drwxr-xr-x  2 root root 4096 Aug  4 20:52 info
+drwxr-xr-x  3 root root 4096 Aug  4 20:54 logs
+drwxr-xr-x 14 root root 4096 Aug  4 21:08 objects
+drwxr-xr-x  4 root root 4096 Aug  4 20:52 refs
+[git@10-168-25-13 .git]$ cat config
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = true
+        logallrefupdates = true
+[git@10-168-25-13 .git]$ cd /root/
+bash: cd: /root/: Permission denied
+[git@10-168-25-13 .git]$ ll
+total 44
+drwxr-xr-x  2 root root 4096 Aug  4 20:52 branches
+-rw-r--r--  1 root root   12 Aug  4 20:56 COMMIT_EDITMSG
+-rw-r--r--  1 root root   91 Aug  4 21:20 config
+-rw-r--r--  1 root root   73 Aug  4 20:52 description
+-rw-r--r--  1 root root   23 Aug  4 20:52 HEAD
+drwxr-xr-x  2 root root 4096 Aug  4 20:52 hooks
+-rw-r--r--  1 root root  176 Aug  4 20:56 index
+drwxr-xr-x  2 root root 4096 Aug  4 20:52 info
+drwxr-xr-x  3 root root 4096 Aug  4 20:54 logs
+drwxr-xr-x 14 root root 4096 Aug  4 21:08 objects
+drwxr-xr-x  4 root root 4096 Aug  4 20:52 refs
+[git@10-168-25-13 .git]$ exit
+exit
+[root@10-168-25-13 chef]# cd /root/.gitconfig
+-bash: cd: /root/.gitconfig: Not a directory
+[root@10-168-25-13 chef]# cat /root/.gitconfig
+[user]
+        name = gopal
+        email = visualpath.devops@gmail.com
+[root@10-168-25-13 chef]#
+
+
+Maven
+--------------------------------------------------------------------
+
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+
+
+after maven download you need to set the path of Maven home
+
+
+maven installation 
+
+command to ceate diectoies
+:
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
