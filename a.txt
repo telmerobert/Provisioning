@@ -1,0 +1,3 @@
+Git stash
+git show
+git log 
